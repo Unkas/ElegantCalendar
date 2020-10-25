@@ -66,6 +66,7 @@ struct ElegantCalendarView_Previews: PreviewProvider {
 
             DarkThemePreview {
                 ElegantCalendarView(calendarManager: ElegantCalendarManager(configuration: .mock))
+                    .environment(\.calendarTheme, CalendarTheme.brilliantViolet)
 
     //            ElegantCalendarView(calendarManager: ElegantCalendarManager(configuration: .mock, initialMonth: Date()))
             }
