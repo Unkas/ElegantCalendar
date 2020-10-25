@@ -52,13 +52,13 @@ public struct MonthlyCalendarView: View, MonthlyCalendarManagerDirectAccess {
                              pageTurnType: .monthlyEarlyCutoff,
                              viewForPage: monthView)
                     .onPageChanged(configureNewMonth)
-                    .frame(width: CalendarConstants.Monthly.cellWidth)
+                    .frame(maxWidth: .infinity)
             } else {
                 ElegantHList(manager: listManager,
                              pageTurnType: .monthlyEarlyCutoff,
                              viewForPage: monthView)
                     .onPageChanged(configureNewMonth)
-                    .frame(width: CalendarConstants.Monthly.cellWidth)
+                    .frame(maxWidth: .infinity)
             }
         }
     }
