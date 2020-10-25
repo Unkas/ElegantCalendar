@@ -40,7 +40,7 @@ struct DayView: View, MonthlyCalendarManagerDirectAccess {
         Text(numericDay)
             .font(.footnote)
             .foregroundColor(foregroundColor)
-            .frame(width: CalendarConstants.Monthly.dayWidth, height: CalendarConstants.Monthly.dayWidth)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(backgroundColor)
             .clipShape(Circle())
             .opacity(opacity)
@@ -113,10 +113,11 @@ private struct CircularSelectionView: View {
 
 struct DayView_Previews: PreviewProvider {
     static var previews: some View {
-        LightDarkThemePreview {
+//        LightDarkThemePreview {
             DayView(calendarManager: .mock, week: Date(), day: Date())
-
-            DayView(calendarManager: .mock, week: Date(), day: .daysFromToday(3))
-        }
+//
+//        }
+        //DayView(calendarManager: .mock, week: Date(), day: .daysFromToday(3))
+            .environment(\.calendarTheme, CalendarTheme.craftBrown)
     }
 }

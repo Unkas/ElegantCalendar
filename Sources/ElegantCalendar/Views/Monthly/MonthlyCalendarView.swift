@@ -82,7 +82,7 @@ public struct MonthlyCalendarView: View, MonthlyCalendarManagerDirectAccess {
 struct MonthlyCalendarView_Previews: PreviewProvider {
     static var previews: some View {
         LightDarkThemePreview {
-            MonthlyCalendarView(calendarManager: .mock)
+            //MonthlyCalendarView(calendarManager: .mock)
 
             MonthlyCalendarView(calendarManager: .mockWithInitialMonth)
         }
